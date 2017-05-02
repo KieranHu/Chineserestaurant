@@ -22,9 +22,8 @@ if ($conn->query($sql) === TRUE) {
    echo "Error using database: " . $conn->error;
 }
 // Query:
-$input = $_POST['id'];
-echo $id;
-$sql = "SELECT * FROM Restaurant_info WHERE Restaurant_Name = '$input';";
+$input = $_POST['input'];
+$sql = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '*$input*';";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 
