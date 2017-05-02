@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" type = "text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Eagle+Lake|Lobster|Pacifico" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type = "text/css"/>
+    <link href="css/form8.css" rel="stylesheet" type = "text/css"/>
+    <script type="text/javascript" src="css/bootstrap/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="css/bootstrap/js/bootstrap.js"></script>
+
+    <title>Chinese restaurant at Rochester</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class ="row">
+            <div class ="col-md-12">
+                <h1>Chinese restaurant at Rochester</h1>
+            </div>
+        </div>
+
+        <div class ="row">
+             <div class = "col-md-12">
+                 <img src="http://img2.imgtn.bdimg.com/it/u=1387056450,587671555&fm=214&gp=0.jpg" alt = "image of Chinese food"/>
+             </div>
+        </div>
+
+        <div class ="row text-center">
+            <div class = "col-md-3">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#SearchIngredient">
+                    <a>Search Ingredient</a>
+                </button>
+            </div>
+
+            <div class = "col-md-3">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#SearchDish">
+                    <a>Search Dish</a>
+                </button>
+            </div>
+
+            <div class = "col-md-3">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#SearchRestaurant">
+                    <a>Search Restaurant</a>
+                </button>
+            </div>
+
+            <div class = "col-md-3">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Manage">
+                    <a>Manage</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <hr/>
+            <div class="col-md-12 text-right">
+                <a class="footer">@copyright Kaiyuan Hu, Li Ding, Tianyuan Xie</a>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="SearchIngredient" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Search Ingredient</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="center form-style-8">
+                            <form action="find_stu.php" method="post">
+                                Ingredient:  <input type="text" name="input"><br>
+                                <input type="submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="SearchDish" tabindex="-1" role="dialog" aria-labelledby="SearchDish" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="SearchDish">Search Dish</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="center form-style-8">
+                        <form action="find_stu.php" method="post">
+                            Dish:  <input type="text" name="id"><br>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="SearchRestaurant" tabindex="0" role="dialog" aria-labelledby="SearchRestaurant" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="SearchRestaurant">Search Restaurant</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="center form-style-8">
+                        <form action="search_restaurant.php" method="post">
+                            Restaurant:  <input type="text" name="id"><br>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Manage" tabindex="0" role="dialog" aria-labelledby="Manage" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="Manage">Manage Database</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="center form-style-8">
+                        <a href ="add.html">Add restaurant</a><br/>
+                        <a href ="update.html">Update dish price</a><br/>
+                        <a href ="delete.html">Delete dish</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>

@@ -1,0 +1,31 @@
+img{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+a{
+    font-family: 'Baloo', cursive;
+    font-size: 20px;
+    color: #000000;
+}
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+}
+
+button{
+    font-family: 'Baloo', cursive;
+    font-size: 20px;
+    color: #000000;
+
+}
+form{
+    font-family: 'Baloo', cursive;
+    font-size: 18px;
+}
+
+.footer{
+    font-size: 16px;
+    font-family: 'Eagle Lake', cursive;
+}
