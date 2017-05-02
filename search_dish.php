@@ -23,34 +23,22 @@ if ($conn->query($sql) === TRUE) {
 }
 // Query:
 $input = $_POST['input'];
-$sql = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '*$input*';";
+$sql = "SELECT Restaurant_info.Restaurant_Name,Menu.Price from Restaurant_info,Dish_info,Menu where Dish_info.Dish_Name LIKE '*$input*' and Dish_info.Dish_ID = Menu.Dish_ID and Restaurant_info.Restaurant_ID = Menu.Restaurant_ID;";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 
 ?>
    <table class="table table-striped">
       <tr>
-         <th>Restaurant_ID</th>
          <th>Restaurant_Name</th>
-         <th>Address</th>
-         <th>Phone</th>
-         <th>Delivery_Available</th>
-         <th>Average_Price</th>
-         <th>Rating</th>
-         <th>Website</th>
+         <th>Price</th>
       </tr>
 <?php
 while($row = $result->fetch_assoc()){
 ?>
       <tr>
-          <td><?php echo $row['Restaurant_ID']?></td>
           <td><?php echo $row['Restaurant_Name']?></td>
-          <td><?php echo $row['Address']?></td>
-          <td><?php echo $row['Phone']?></td>
-          <td><?php echo $row['Delivery_Available']?></td>
-          <td><?php echo $row['Average_Price']?></td>
-          <td><?php echo $row['Rating']?></td>
-          <td><?php echo $row['Website']?></td>
+          <td><?php echo $row['Price']?></td>
       </tr>
 <?php
 }
