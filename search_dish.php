@@ -23,7 +23,7 @@ if ($conn->query($sql) === TRUE) {
 }
 // Query:
 $input = $_POST['input'];
-$sql = "SELECT Restaurant_info.Restaurant_Name,Menu.Price from Restaurant_info,Dish_info,Menu where Dish_info.Dish_Name LIKE '*$input*' and Dish_info.Dish_ID = Menu.Dish_ID and Restaurant_info.Restaurant_ID = Menu.Restaurant_ID;";
+$sql = "SELECT Restaurant_info.Restaurant_Name,Menu.Price from Restaurant_info,Dish_info,Menu where Dish_info.Dish_Name LIKE '%$input%' and Dish_info.Dish_ID = Menu.Dish_ID and Restaurant_info.Restaurant_ID = Menu.Restaurant_ID;";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 

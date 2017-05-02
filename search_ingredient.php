@@ -23,7 +23,7 @@ if ($conn->query($sql) === TRUE) {
 }
 // Query:
 $input = $_POST['input'];
-$sql = "SELECT Dish_Name, Main_Ingredient, Second_Ingredient from Dish_info, Ingredient where Ingredient_Name LIKE '*$input*' and (Ingredient_ID = Main_Ingredient or Ingredient_ID = Second_Ingredient);";
+$sql = "SELECT Dish_Name, Main_Ingredient, Second_Ingredient from Dish_info, Ingredient where Ingredient_Name LIKE '%$input%' and (Ingredient_ID = Main_Ingredient or Ingredient_ID = Second_Ingredient);";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 
