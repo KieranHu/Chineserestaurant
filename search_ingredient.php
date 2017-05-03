@@ -23,7 +23,7 @@ if ($conn->query($sql) === TRUE) {
 }
 // Query:
 $input = $_POST['input'];
-$sql = "SELECT Dish_Name, Main_Ingredient, Second_Ingredient from Dish_info, Ingredient where Ingredient_Name LIKE '*$input*' and (Ingredient_ID = Main_Ingredient or Ingredient_ID = Second_Ingredient);";
+$sql = "SELECT Dish_Name, Main_Ingredient, Secondary_Ingredient from Dish_info where Main_Ingredient LIKE '%$input%' or Secondary_Ingredient LIKE '%$input%';";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 
@@ -32,7 +32,7 @@ if($result->num_rows > 0){
       <tr>
          <th>Dish_Name</th>
          <th>Main_Ingredient</th>
-         <th>Second_Ingredient</th>
+         <th>Secondary_Ingredient</th>
       </tr>
 <?php
 while($row = $result->fetch_assoc()){
@@ -40,7 +40,7 @@ while($row = $result->fetch_assoc()){
       <tr>
           <td><?php echo $row['Dish_Name']?></td>
           <td><?php echo $row['Main_Ingredient']?></td>
-          <td><?php echo $row['Second_Ingredient']?></td>
+          <td><?php echo $row['Secondary_Ingredient']?></td>
       </tr>
 <?php
 }

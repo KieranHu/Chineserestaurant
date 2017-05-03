@@ -23,7 +23,7 @@ if ($conn->query($sql) === TRUE) {
 }
 // Query:
 $input = $_POST['input'];
-$sql = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '*$input*';";
+$sql = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '%$input%';";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 
