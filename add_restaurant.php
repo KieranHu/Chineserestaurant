@@ -35,9 +35,13 @@ $sql2 = "INSERT into Restaurant_info values(@id, $id1, $id2, $id3, $id4, $id5, $
 $conn->query($sql);
 $conn->query($sql);
 
-?>
+$sql3 = = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '%$id1%';";
+$result = $conn->query($sql3);
 
-echo "Submission Complete.";
+if($result != null){
+    echo "Submission Complete.";
+}
+?>
 
 <?php
 $conn->close();
