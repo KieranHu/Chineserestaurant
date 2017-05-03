@@ -41,6 +41,9 @@ $result = $conn->query($sql3);
 if($result != null){
     echo "Submission Complete.";
 }
+else{
+    echo "Sha.";
+}
 ?>
 
 <?php
