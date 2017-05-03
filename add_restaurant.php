@@ -31,7 +31,7 @@ $id6 = $_POST['id6'];
 $id7 = $_POST['id7'];
 
 $sql1 = "SELECT @id := (max(Restaurant_ID) + 1) from Restaurant_info;";
-$sql2 = "INSERT into Restaurant_info values(@id, $id1, $id2, $id3, $id4, $id5, $id6, $id7);"
+$sql2 = "INSERT into Restaurant_info values(@id, $id1, $id2, $id3, $id4, $id5, $id6, $id7);";
 $conn->query($sql);
 $conn->query($sql);
 
