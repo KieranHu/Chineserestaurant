@@ -41,7 +41,7 @@ $conn->query($sql2);
 
 echo"step 3";
 
-$sql3 = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '%$id1%';";
+$sql3 = "SELECT * FROM Restaurant_info WHERE Restaurant_Name = "$id1";";
 $result = $conn->query($sql3);
 
 if($result != null){
