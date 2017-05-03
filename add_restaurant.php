@@ -30,10 +30,16 @@ $id5 = $_POST['id5'];
 $id6 = $_POST['id6'];
 $id7 = $_POST['id7'];
 
+echo"step 1";
+
 $sql1 = "SELECT @id := (max(Restaurant_ID) + 1) from Restaurant_info;";
 $conn->query($sql1);
+
+echo"step 2";
 $sql2 = "INSERT into Restaurant_info values(@id, $id1, $id2, $id3, $id4, $id5, $id6, $id7);";
 $conn->query($sql2);
+
+echo"step 3";
 
 $sql3 = = "SELECT * FROM Restaurant_info WHERE Restaurant_Name LIKE '%$id1%';";
 $result = $conn->query($sql3);
