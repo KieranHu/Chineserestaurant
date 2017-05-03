@@ -3,7 +3,13 @@ img{
     margin-bottom: 20px;
 }
 
-a, p{
+a{
+    font-family: 'Baloo', cursive;
+    font-size: 20px;
+    color: #000000;
+}
+
+p{
     font-family: 'Baloo', cursive;
     font-size: 20px;
     color: #000000;
